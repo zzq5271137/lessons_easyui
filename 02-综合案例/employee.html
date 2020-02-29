@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employee</title>
+    <link rel="stylesheet" type="text/css" href="./easyui/uimaker/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./easyui/uimaker/icon.css">
+</head>
+<body>
+<table id="table"></table>
+
+<div id="toolbar">
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" id="add">
+        添加
+    </a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">
+        删除
+    </a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true" id="edit">
+        编辑
+    </a>
+    <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true">
+        刷新
+    </a>
+</div>
+
+<div id="dialog">
+    <form id="myform">
+        <table align="center" style="border-spacing: 0 10px">
+            <input type="hidden" name="id">
+            <tr>
+                <td>姓名:</td>
+                <td>
+                    <input name="name" type="text" class="easyui-validatebox"
+                           data-options="required: true">
+                </td>
+            </tr>
+            <tr>
+                <td>入职日期:</td>
+                <td>
+                    <input name="date" type="text" class="easyui-datebox" required="required"
+                           editable="false">
+                </td>
+            </tr>
+            <tr>
+                <td>邮箱:</td>
+                <td>
+                    <input name="email" type="text" class="easyui-validatebox"
+                           data-options="required: true, validType: 'email'">
+                </td>
+            </tr>
+            <tr>
+                <td>部门:</td>
+                <td>
+                    <select name="department.id" id="department" required="required"
+                            editable="false"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>状态:</td>
+                <td>
+                    <select name="state" id="state" required="required" editable="false"></select>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script type="text/javascript" src="./easyui/jquery.min.js"></script>
+<script type="text/javascript" src="./easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="./easyui/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="employee.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-LinkButton组件</title>
+    <link rel="stylesheet" type="text/css" href="../../easyui/uimaker/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../easyui/uimaker/icon.css">
+</head>
+<body>
+
+<div id="btn"></div>
+
+<script type="text/javascript" src="../../easyui/jquery.min.js"></script>
+<script type="text/javascript" src="../../easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../easyui/easyui-lang-zh_CN.js"></script>
+
+<script>
+    $(function () {
+        $('#btn').linkbutton({
+            text: '我的按钮',
+            iconCls: 'icon-add',
+            disabled: false, // 禁用按钮
+        });
+
+        // $('#btn').linkbutton('disable'); // 禁用按钮
+        // $('#btn').linkbutton('enable'); // 起用按钮
+    });
+</script>
+
+</body>
+</html>

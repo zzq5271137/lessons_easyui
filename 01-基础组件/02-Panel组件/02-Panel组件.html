@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-Panel组件</title>
+    <link rel="stylesheet" type="text/css" href="../../easyui/uimaker/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../easyui/uimaker/icon.css">
+</head>
+<body>
+<div id="myPanel"></div>
+
+<br>
+
+<div class="easyui-linkbutton" id="mybtn">按钮</div>
+
+<script type="text/javascript" src="../../easyui/jquery.min.js"></script>
+<script type="text/javascript" src="../../easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../easyui/easyui-lang-zh_CN.js"></script>
+
+<script>
+    $(function () {
+        $('#myPanel').panel({
+            // 属性
+            title: 'My Panel',
+            width: 300,
+            height: 300,
+            iconCls: 'icon-save',
+            collapsible: true,
+            closable: true,
+            minimizable: true,
+            maximizable: true,
+            // content: 'ZzqGo!',
+            href: 'panelContent.html',
+            loadingMessage: '正在加载中',
+            cache: true,
+
+            // 事件
+            onCollapse: function () {
+                alert("监听到面板折叠");
+            },
+            onClose: function () {
+                alert("监听到面板关闭");
+            },
+        });
+
+        $('#mybtn').click(function () {
+            // 调用Panel组件里的一些函数
+            // 点击此按钮重新设置面板标题
+            $('#myPanel').panel('setTitle', '新标题');
+            $('#myPanel').panel('resize', {
+                width: 600,
+                height: 600,
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
