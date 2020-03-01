@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/bootstrap, @types/jquery}" />
+    <file url="PROJECT" libraries="{@types/bootstrap, @types/classnames, @types/enzyme, @types/eslint, @types/express, @types/jest, @types/jquery, @types/material-ui, @types/npm, @types/prop-types, @types/react, @types/react-dom, @types/react-router-dom}" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
